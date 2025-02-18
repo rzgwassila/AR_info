@@ -1,0 +1,207 @@
+<?php include("navbar.php");?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Categories</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header section styling */
+        .header {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            border-top: 1px solid #ddd;
+            margin-top: 100px; /* wassila ki diri la photo bedli hna */
+        }
+
+        .header-item {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .header-item i {
+            font-size: 20px;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Main container styling */
+        .category-container {
+            display: flex;
+            overflow-x: auto; /* Enables horizontal scrolling */
+            gap: 5px; /* Space between category boxes */
+            padding: 20px;
+            justify-content: space-around;
+        }
+
+        .category-box {
+            position: relative;
+            flex: 0 0 auto;
+            width: 18%;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            overflow: hidden;
+            padding: 10px 10px;
+        }
+
+        .category-box img {
+            width: 100%;
+            height: auto;
+            transition: opacity 0.3s; /* Smooth opacity transition */
+        }
+
+        .category-box:hover img {
+            opacity: 0.3; /* Make image transparent on hover */
+        }
+
+        /* Text overlay styling */
+        .overlay-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3); /* Dark overlay */
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            padding-bottom: 20px;
+        }
+
+        .category-box:hover .overlay-text {
+            opacity: 1; /* Show text overlay on hover */
+        }
+
+        .overlay-text p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .titre_box{
+            font-weight: bolder;
+            border-top: #333 1px solid;
+            padding-top: 10px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with icons and text -->
+    <div class="header">
+        <div class="header-item">
+            <i class="fa-solid fa-star"></i>
+            <p>1 ans d'expertise<br>à votre service</p>
+        </div>
+        <div class="header-item">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p>+ de 15 000 références<br>choisies par nos experts</p>
+        </div>
+        <div class="header-item">
+            <i class="fa-solid fa-truck"></i>
+            <p>Livraison disponible 58 wilayas </p>
+        </div>
+        <div class="header-item">
+            <i class="fa-solid fa-message"></i>
+            <p>Une équipe clientèle<br>à votre écoute</p>
+        </div>
+    </div>
+
+    <!-- Main categories section -->
+    <div class="category-container">
+        <!-- Gaming category -->
+        <div class="category-box">
+            <img src="image/5.png" alt="Gaming">
+            <div class="overlay-text">
+                <p>PC Gamer</p>
+                <p>PC Portable Gamer</p>
+                <p>Écran PC Gamer</p>
+                <p>Clavier Gamer</p>
+                <p>Souris Gamer</p>
+                <p>Casque Gamer</p>
+                <p>Fauteuil Gamer</p>
+            </div>
+            <p class="titre_box">Gaming</p>
+        </div>
+
+        <!-- PC et ordinateur category -->
+        <div class="category-box">
+            <img src="image/6.png" alt="PC et ordinateur">
+            <div class="overlay-text">
+                <p>PC Materiel.net</p>
+                <p>PC sur mesure</p>
+                <p>PC de bureau</p>
+                <p>iMac et Mac Mini</p>
+                <p>PC Portable</p>
+                <p>MacBook</p>
+                <p>Windows 11</p>
+            </div>
+            <p class="titre_box">PC et ordinateur</p>
+        </div>
+
+        <!-- Composant PC category -->
+        <div class="category-box">
+            <img src="image/7.png" alt="Composant PC">
+            <div class="overlay-text">
+                <p>Kit d'évolution PC</p>
+                <p>Carte graphique</p>
+                <p>Disque dur SSD</p>
+                <p>Disque dur</p>
+                <p>Processeur</p>
+                <p>Carte mère</p>
+                <p>Barrette mémoire</p>
+            </div>
+            <p class="titre_box">Composant PC</p>
+        </div>
+
+        <!-- Périphérique PC category -->
+        <div class="category-box">
+            <img src="image/8.png" alt="Périphérique PC">
+            <div class="overlay-text">
+                <p>Écran PC</p>
+                <p>Clavier</p>
+                <p>Souris</p>
+                <p>Casque micro</p>
+                <p>Réalité virtuelle</p>
+                <p>Webcam</p>
+                <p>Impression</p>
+            </div>
+            <p class="titre_box">Périphérique PC</p>
+        </div>
+
+        <!-- Image et son category -->
+        <div class="category-box">
+            <img src="image/9.png" alt="Image et son">
+            <div class="overlay-text">
+                <p>Téléviseur</p>
+                <p>Barre de son</p>
+                <p>Vidéoprojecteur</p>
+                <p>Casque audio</p>
+                <p>Enceinte Bluetooth</p>
+                <p>Ampli Home Cinéma</p>
+                <p>Appareil photo et caméra</p>
+            </div>
+            <p class="titre_box">Image et son</p>
+        </div>
+    </div>
+
+</body>
+</html>
