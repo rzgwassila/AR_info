@@ -1,0 +1,7 @@
+(function() {
+    var ps=document.createElement("script");
+    ps.src="/ps/events.js";
+    ps.setAttribute("defer",true);
+    ps.setAttribute("data-domain","materiel.net");
+    document.body.appendChild(ps);
+}());
